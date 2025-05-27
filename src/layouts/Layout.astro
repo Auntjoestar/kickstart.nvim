@@ -1,3 +1,12 @@
+---
+import '../styles/global.css'
+import Navbar from '../components/Navbar.astro'
+import logoSvg from '../assets/tebas_logo.svg'
+import logoPng from '../assets/tebas_logo.png'
+
+const alt = "logo-tebas";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,8 +15,12 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 	</head>
 	<body>
+		<header>
+			<Navbar alt={alt} logoSvg={logoSvg} logoPng={logoPng} />
+		</header>
 		<slot />
 	</body>
 </html>
