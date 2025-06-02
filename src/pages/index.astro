@@ -1,15 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import { getHeroInformation } from '../lib/wp.ts'
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/index/Hero.astro'
+import WhyUs from '../components/index/WhyUs.astro'
+import { getHeroInfo } from '../lib/queries/getHeroInformation'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
-const heroInformation = await getHeroInformation();
+const {
+	heading,
+	subheading,
+	remoteUrl,
+	width,
+	height,
+	callToAction,
+	callToAction2,
+	reason1,
+	reason2,
+	reason3
+} = await getHeroInfo()
 ---
 
 <!-- <Hero /> -->
- <Layout>
-
- </Layout>
+<Layout>
+	<Hero
+		heading={heading}
+		subheading={subheading}
+		backgroundImage={remoteUrl}
+		width={width}
+		height={height}
+		callToAction={callToAction}
+		callToAction2={callToAction2}
+		reason1={reason1}
+		reason2={reason2}
+		reason3={reason3}
+	/>
+	<WhyUs />
+</Layout>

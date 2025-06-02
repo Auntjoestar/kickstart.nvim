@@ -1,18 +1,57 @@
-export const getHeroInformationQuery =  `
-GetHeroInformation {
-  page(id: "\"home\"", idType: URI) {
+import { query } from "../strapi";
+import { remoteImageUrlMaker } from "../helpers/remoteImageUrlMaker";
+
+const getHeroInformationQuery = `
+query GetHero {
+  home {
     hero {
-      headline
+      heading
       subheading
-      image {
-        node {
-          sourceUrl
-          altText
-        }
+      background {
+        url
+        width
+        height
       }
-      cta_button_text
-      cta_link
+      callToAction
+      callToAction2
+      reason1,
+      reason2,
+      reason3
     }
   }
 }
-`
+`;
+
+export const getHeroInfo = async () => {
+  const {
+    home: { hero },
+  } = await query(getHeroInformationQuery);
+
+  console.log(hero);
+
+  const {
+    heading,
+    subheading,
+    background: { url, width, height },
+    callToAction,
+    callToAction2,
+    reason1,
+    reason2,
+    reason3,
+  } = hero;
+
+  const remoteUrl = remoteImageUrlMaker(url);
+
+  return {
+    heading,
+    subheading,
+    remoteUrl,
+    width,
+    height,
+    callToAction,
+    callToAction2,
+    reason1,
+    reason2,
+    reason3,
+  };
+};

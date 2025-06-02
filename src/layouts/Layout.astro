@@ -1,25 +1,36 @@
 ---
 import '../styles/global.css'
-import Navbar from '../components/Navbar.astro'
-import logoSvg from '../assets/tebas_logo.svg'
-import logoPng from '../assets/tebas_logo.png'
+import Navbar from '../components/layout/Navbar.astro'
+import logoSvg from '../assets/tebas-logo-claro.svg'
+import type { Props as NavbarProps } from '../components/layout/navbar'
 
-const alt = "logo-tebas";
+const alt = 'logo-tebas'
+
+const navbarProps: NavbarProps = {
+	Logo: logoSvg
+}
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
-		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header>
-			<Navbar alt={alt} logoSvg={logoSvg} logoPng={logoPng} />
+			<Navbar Logo={navbarProps.Logo} />
 		</header>
 		<slot />
 	</body>
@@ -31,5 +42,6 @@ const alt = "logo-tebas";
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		min-width: auto;
 	}
 </style>

@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+import Card from './Card.astro'
+
+interface Props {
+	heading: string
+	subheading: string
+	backgroundImage: string
+	width: string
+	height: string
+	callToAction: string
+	callToAction2: string
+	reason1: string
+	reason2: string
+	reason3: string
+}
+
+const {
+	heading,
+	subheading,
+	backgroundImage,
+	width,
+	height,
+	callToAction,
+	callToAction2,
+	reason1,
+	reason2,
+	reason3
+} = Astro.props
+---
+
+<div
+	class="bg-tebas-800/45 relative flex h-10/12 items-center justify-center bg-cover bg-center bg-blend-overlay"
+	aria-label="Hero Section"
+	style={{ 'background-image': `url(${backgroundImage})` }}
+>
+	<div class="flex w-full max-w-7xl items-center justify-between px-12 text-white">
+		<!-- Left Text Column -->
+		<div class="flex w-1/2 flex-col gap-10">
+			<div class="w-3/5">
+				<h1 class="font-important text-4xl font-bold md:text-6xl">
+					{heading}
+				</h1>
+				<h2 class="font-secondary mt-4 text-2xl font-medium text-gray-100">
+					{subheading}
+				</h2>
+			</div>
+			<div class="font-secondary flex gap-4 font-semibold">
+				<a class="rounded bg-cyan-600 px-6 py-3 text-white transition-colors hover:bg-cyan-700"
+					>{callToAction}</a
+				>
+				<a class="rounded bg-cyan-400 px-6 py-3 text-white transition-colors hover:bg-cyan-500"
+					>{callToAction2}</a
+				>
+			</div>
+		</div>
+
+		<!-- Right Icons Column -->
+		<div class="font-secondary flex w-20 flex-col gap-1 pt-12 text-white">
+			<Card name="quality" bg="bg-tebas-300/95" text={reason1} />
+			<Card name="quick" bg="bg-tebas-500/95" text={reason2} />
+			<Card name="clear" bg="bg-tebas-800/95" text={reason3} />
+		</div>
+	</div>
+</div>
