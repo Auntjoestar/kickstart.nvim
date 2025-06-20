@@ -20,9 +20,6 @@ importers:
       '@vueuse/core':
         specifier: ^13.3.0
         version: 13.3.0(vue@3.5.15(typescript@5.8.3))
-      animejs:
-        specifier: ^4.0.2
-        version: 4.0.2
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.8.3)
@@ -35,18 +32,9 @@ importers:
       google-fonts:
         specifier: ^1.0.0
         version: 1.0.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
-      prettier-plugin-astro:
-        specifier: ^0.14.1
-        version: 0.14.1
-      prettier-plugin-tailwindcss:
-        specifier: ^0.6.12
-        version: 0.6.12(prettier-plugin-astro@0.14.1)(prettier@3.5.3)
-      prettier-plugin-vue:
-        specifier: ^1.1.6
-        version: 1.1.6
+      preline:
+        specifier: ^3.1.0
+        version: 3.1.0
       tailwindcss:
         specifier: ^4.1.7
         version: 4.1.7
@@ -54,9 +42,27 @@ importers:
         specifier: ^3.5.15
         version: 3.5.15(typescript@5.8.3)
     devDependencies:
+      '@tailwindcss/forms':
+        specifier: ^0.5.10
+        version: 0.5.10(tailwindcss@4.1.7)
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.1.7)
+      daisyui:
+        specifier: ^5.0.43
+        version: 5.0.43
+      prettier:
+        specifier: ^3.5.3
+        version: 3.5.3
+      prettier-plugin-astro:
+        specifier: ^0.14.1
+        version: 0.14.1
+      prettier-plugin-tailwindcss:
+        specifier: ^0.6.13
+        version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier@3.5.3)
+      prettier-plugin-vue:
+        specifier: ^1.1.6
+        version: 1.1.6
 
 packages:
 
@@ -389,6 +395,15 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@floating-ui/core@1.7.1':
+    resolution: {integrity: sha512-azI0DrjMMfIug/ExbBaeDVJXcY0a7EPvPjb2xAJPa4HeimBX+Z18HK8QQR3jb6356SnDDdxx+hinMLcJEDdOjw==}
+
+  '@floating-ui/dom@1.7.1':
+    resolution: {integrity: sha512-cwsmW/zyw5ltYTUeeYJ60CnQuPqmGwuGVhG9w0PRaRKkAyi38BT5CKrpIbb+jtahSwUl04cWzSx9ZOIxeS6RsQ==}
+
+  '@floating-ui/utils@0.2.9':
+    resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
+
   '@iconify/tools@4.1.2':
     resolution: {integrity: sha512-q6NzLQYEN9zkDfcyBqD3vItHcZw97w/s++3H3TBxUORr57EfHxj6tOW6fyufDjMq+Vl56WXWaPx1csBPYlI5CA==}
 
@@ -688,8 +703,41 @@ packages:
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
 
+  '@svgdotjs/svg.draggable.js@3.0.6':
+    resolution: {integrity: sha512-7iJFm9lL3C40HQcqzEfezK2l+dW2CpoVY3b77KQGqc8GXWa6LhhmX5Ckv7alQfUXBuZbjpICZ+Dvq1czlGx7gA==}
+    peerDependencies:
+      '@svgdotjs/svg.js': ^3.2.4
+
+  '@svgdotjs/svg.filter.js@3.0.9':
+    resolution: {integrity: sha512-/69XMRCDoam2HgC4ldHIaDgeQf1ViHIsa0Ld4uWgiXtZ+E24DWHe/9Ib6kbNiZ7WRIdlVokUDR1Fg0kjIpkfbw==}
+    engines: {node: '>= 0.8.0'}
+
+  '@svgdotjs/svg.js@3.2.4':
+    resolution: {integrity: sha512-BjJ/7vWNowlX3Z8O4ywT58DqbNRyYlkk6Yz/D13aB7hGmfQTvGX4Tkgtm/ApYlu9M7lCQi15xUEidqMUmdMYwg==}
+
+  '@svgdotjs/svg.resize.js@2.0.5':
+    resolution: {integrity: sha512-4heRW4B1QrJeENfi7326lUPYBCevj78FJs8kfeDxn5st0IYPIRXoTtOSYvTzFWgaWWXd3YCDE6ao4fmv91RthA==}
+    engines: {node: '>= 14.18'}
+    peerDependencies:
+      '@svgdotjs/svg.js': ^3.2.4
+      '@svgdotjs/svg.select.js': ^4.0.1
+
+  '@svgdotjs/svg.select.js@4.0.3':
+    resolution: {integrity: sha512-qkMgso1sd2hXKd1FZ1weO7ANq12sNmQJeGDjs46QwDVsxSRcHmvWKL2NDF7Yimpwf3sl5esOLkPqtV2bQ3v/Jg==}
+    engines: {node: '>= 14.18'}
+    peerDependencies:
+      '@svgdotjs/svg.js': ^3.2.4
+
+  '@swc/helpers@0.2.14':
+    resolution: {integrity: sha512-wpCQMhf5p5GhNg2MmGKXzUNwxe7zRiCsmqYsamez2beP7mKPCSiu+BjZcdN95yYSzO857kr0VfQewmGpS77nqA==}
+
   '@swc/helpers@0.5.17':
     resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
+
+  '@tailwindcss/forms@0.5.10':
+    resolution: {integrity: sha512-utI1ONF6uf/pPNO68kmN1b8rEwNXv3czukalo8VtJH8ksIkZXr3Q3VYudZLkCsDd4Wku120uF02hYK25XGPorw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20 || >= 4.0.0-beta.1'
 
   '@tailwindcss/node@4.1.7':
     resolution: {integrity: sha512-9rsOpdY9idRI2NH6CL4wORFY0+Q6fnx9XP9Ju+iq/0wJwGD5IByIgFmwVbyy4ymuyprj8Qh4ErxMKTUL4uNh3g==}
@@ -915,13 +963,13 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
+  '@yr/monotone-cubic-spline@1.0.3':
+    resolution: {integrity: sha512-FQXkOta0XBSUPHndIKON2Y9JeQz5ZeMqLYZVVK93FliNBFm7LNMIZmY6FrMEB9XPcDbE2bekMbZD6kzDkxwYjA==}
+
   acorn@8.14.1:
     resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  animejs@4.0.2:
-    resolution: {integrity: sha512-f0L/kSya2RF23iMSF/VO01pMmLwlAFoiQeNAvBXhEyLzIPd2/QTBRatwGUqkVCC6seaAJYzAkGir55N4SL+h3A==}
 
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
@@ -941,6 +989,9 @@ packages:
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
+
+  apexcharts@4.7.0:
+    resolution: {integrity: sha512-iZSrrBGvVlL+nt2B1NpqfDuBZ9jX61X9I2+XV0hlYXHtTwhwLTHDKGXjNXAgFBDLuvSYCB/rq2nPWVPRv2DrGA==}
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -1158,6 +1209,15 @@ packages:
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
+  daisyui@5.0.43:
+    resolution: {integrity: sha512-2pshHJ73vetSpsbAyaOncGnNYL0mwvgseS1EWy1I9Qpw8D11OuBoDNIWrPIME4UFcq2xuff3A9x+eXbuFR9fUQ==}
+
+  datatables.net-dt@2.3.2:
+    resolution: {integrity: sha512-2heAMe0AVqJ8nt9wE35ArLtL1zP7N7qnhM3u52bLcJfi4NStxyBsHScVggTHVQPj7r9O+qirAxox1Xcr+Bm4Dw==}
+
+  datatables.net@2.3.2:
+    resolution: {integrity: sha512-31TzwIQM0+pr2ZOEOEH6dsHd/WSAl5GDDGPezOHPI3mM2NK4lcDyOoG8xXeWmSbVfbi852LNK5C84fpp4Q+qxg==}
+
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
     engines: {node: '>=6.0'}
@@ -1236,6 +1296,9 @@ packages:
 
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
+
+  dropzone@6.0.0-beta.2:
+    resolution: {integrity: sha512-k44yLuFFhRk53M8zP71FaaNzJYIzr99SKmpbO/oZKNslDjNXQsBTdfLs+iONd0U0L94zzlFzRnFdqbLcs7h9fQ==}
 
   dset@3.1.4:
     resolution: {integrity: sha512-2QF/g9/zTaPDc3BjNcVTGoBbXBgYfMTTceLaYcFJ/W9kggFUkhxD/hMEeuLKbugyef9SqAx8cpgwlIP/jinUTA==}
@@ -1567,6 +1630,9 @@ packages:
     resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
     hasBin: true
 
+  jquery@3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -1586,6 +1652,9 @@ packages:
 
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+
+  just-extend@5.1.1:
+    resolution: {integrity: sha512-b+z6yF1d4EOyDgylzQo5IminlUmzSeqR1hs/bzjBNjuGras4FXq/6TrzjxfN0j+TmI0ltJzTNlqXUMCniciwKQ==}
 
   kleur@3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
@@ -1931,6 +2000,9 @@ packages:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
 
+  nouislider@15.8.1:
+    resolution: {integrity: sha512-93TweAi8kqntHJSPiSWQ1o/uZ29VWOmal9YKb6KKGGlCkugaNfAupT7o1qTHqdJvNQ7S0su5rO6qRFCjP8fxtw==}
+
   npm-run-path@6.0.0:
     resolution: {integrity: sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA==}
     engines: {node: '>=18'}
@@ -2039,12 +2111,15 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
+  preline@3.1.0:
+    resolution: {integrity: sha512-vBDqqcANzw1Fom1Ot0x/k2f0zGE9NgGqyfgycxqaG2XgIUyvWOjNB5r2urlabCMsdnURx1g9QRncElwO8iJskQ==}
+
   prettier-plugin-astro@0.14.1:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier-plugin-tailwindcss@0.6.12:
-    resolution: {integrity: sha512-OuTQKoqNwV7RnxTPwXWzOFXy6Jc4z8oeRZYGuMpRyG3WbuR3jjXdQFK8qFBMBx8UHWdHrddARz2fgUenild6aw==}
+  prettier-plugin-tailwindcss@0.6.13:
+    resolution: {integrity: sha512-uQ0asli1+ic8xrrSmIOaElDu0FacR4x69GynTh2oZjFY10JUt6EEumTQl5tB4fMeD6I1naKd+4rXQQ7esT2i1g==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -2508,6 +2583,9 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  vanilla-calendar-pro@3.0.4:
+    resolution: {integrity: sha512-i13aJsfovlfRGm7zkoxYh9WylkdLVJkjmfZjJms5cb5i/lbnPTBaDQ0J51joC3Q4h66sFpEUjA4bXLAr/OPZ2w==}
 
   vfile-location@5.0.3:
     resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
@@ -3050,6 +3128,17 @@ snapshots:
   '@esbuild/win32-x64@0.25.5':
     optional: true
 
+  '@floating-ui/core@1.7.1':
+    dependencies:
+      '@floating-ui/utils': 0.2.9
+
+  '@floating-ui/dom@1.7.1':
+    dependencies:
+      '@floating-ui/core': 1.7.1
+      '@floating-ui/utils': 0.2.9
+
+  '@floating-ui/utils@0.2.9': {}
+
   '@iconify/tools@4.1.2':
     dependencies:
       '@iconify/types': 2.0.0
@@ -3305,9 +3394,35 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
+  '@svgdotjs/svg.draggable.js@3.0.6(@svgdotjs/svg.js@3.2.4)':
+    dependencies:
+      '@svgdotjs/svg.js': 3.2.4
+
+  '@svgdotjs/svg.filter.js@3.0.9':
+    dependencies:
+      '@svgdotjs/svg.js': 3.2.4
+
+  '@svgdotjs/svg.js@3.2.4': {}
+
+  '@svgdotjs/svg.resize.js@2.0.5(@svgdotjs/svg.js@3.2.4)(@svgdotjs/svg.select.js@4.0.3(@svgdotjs/svg.js@3.2.4))':
+    dependencies:
+      '@svgdotjs/svg.js': 3.2.4
+      '@svgdotjs/svg.select.js': 4.0.3(@svgdotjs/svg.js@3.2.4)
+
+  '@svgdotjs/svg.select.js@4.0.3(@svgdotjs/svg.js@3.2.4)':
+    dependencies:
+      '@svgdotjs/svg.js': 3.2.4
+
+  '@swc/helpers@0.2.14': {}
+
   '@swc/helpers@0.5.17':
     dependencies:
       tslib: 2.8.1
+
+  '@tailwindcss/forms@0.5.10(tailwindcss@4.1.7)':
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 4.1.7
 
   '@tailwindcss/node@4.1.7':
     dependencies:
@@ -3574,9 +3689,9 @@ snapshots:
     dependencies:
       vue: 3.5.15(typescript@5.8.3)
 
-  acorn@8.14.1: {}
+  '@yr/monotone-cubic-spline@1.0.3': {}
 
-  animejs@4.0.2: {}
+  acorn@8.14.1: {}
 
   ansi-align@3.0.1:
     dependencies:
@@ -3592,6 +3707,15 @@ snapshots:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
+
+  apexcharts@4.7.0:
+    dependencies:
+      '@svgdotjs/svg.draggable.js': 3.0.6(@svgdotjs/svg.js@3.2.4)
+      '@svgdotjs/svg.filter.js': 3.0.9
+      '@svgdotjs/svg.js': 3.2.4
+      '@svgdotjs/svg.resize.js': 2.0.5(@svgdotjs/svg.js@3.2.4)(@svgdotjs/svg.select.js@4.0.3(@svgdotjs/svg.js@3.2.4))
+      '@svgdotjs/svg.select.js': 4.0.3(@svgdotjs/svg.js@3.2.4)
+      '@yr/monotone-cubic-spline': 1.0.3
 
   argparse@2.0.1: {}
 
@@ -3911,6 +4035,17 @@ snapshots:
 
   csstype@3.1.3: {}
 
+  daisyui@5.0.43: {}
+
+  datatables.net-dt@2.3.2:
+    dependencies:
+      datatables.net: 2.3.2
+      jquery: 3.7.1
+
+  datatables.net@2.3.2:
+    dependencies:
+      jquery: 3.7.1
+
   debug@4.4.1:
     dependencies:
       ms: 2.1.3
@@ -3973,6 +4108,11 @@ snapshots:
       dom-serializer: 2.0.0
       domelementtype: 2.3.0
       domhandler: 5.0.3
+
+  dropzone@6.0.0-beta.2:
+    dependencies:
+      '@swc/helpers': 0.2.14
+      just-extend: 5.1.1
 
   dset@3.1.4: {}
 
@@ -4385,6 +4525,8 @@ snapshots:
 
   jiti@2.4.2: {}
 
+  jquery@3.7.1: {}
+
   js-tokens@4.0.0: {}
 
   js-yaml@4.1.0:
@@ -4400,6 +4542,8 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
+
+  just-extend@5.1.1: {}
 
   kleur@3.0.3: {}
 
@@ -4874,6 +5018,8 @@ snapshots:
 
   normalize-path@3.0.0: {}
 
+  nouislider@15.8.1: {}
+
   npm-run-path@6.0.0:
     dependencies:
       path-key: 4.0.0
@@ -4992,13 +5138,22 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  preline@3.1.0:
+    dependencies:
+      '@floating-ui/dom': 1.7.1
+      apexcharts: 4.7.0
+      datatables.net-dt: 2.3.2
+      dropzone: 6.0.0-beta.2
+      nouislider: 15.8.1
+      vanilla-calendar-pro: 3.0.4
+
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.12.0
       prettier: 3.5.3
       sass-formatter: 0.7.9
 
-  prettier-plugin-tailwindcss@0.6.12(prettier-plugin-astro@0.14.1)(prettier@3.5.3):
+  prettier-plugin-tailwindcss@0.6.13(prettier-plugin-astro@0.14.1)(prettier@3.5.3):
     dependencies:
       prettier: 3.5.3
     optionalDependencies:
@@ -5455,6 +5610,8 @@ snapshots:
       picocolors: 1.1.1
 
   util-deprecate@1.0.2: {}
+
+  vanilla-calendar-pro@3.0.4: {}
 
   vfile-location@5.0.3:
     dependencies:

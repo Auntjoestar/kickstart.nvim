@@ -1,13 +1,12 @@
 ---
 import '../styles/global.css'
-import Navbar from '../components/layout/Navbar.astro'
-import logoSvg from '../assets/tebas-logo-claro.svg'
-import type { Props as NavbarProps } from '../components/layout/navbar'
+import Navbar from '../components/layout/navbar/Navbar.astro'
+import type { Props as NavbarProps } from '../components/layout/navbar/Navbar.astro'
 
 const alt = 'logo-tebas'
 
 const navbarProps: NavbarProps = {
-	Logo: logoSvg
+	logo: 'logo'
 }
 ---
 
@@ -18,7 +17,7 @@ const navbarProps: NavbarProps = {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Tebas: Construcciones, soluciones y diseños</title>
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
 		></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +29,7 @@ const navbarProps: NavbarProps = {
 	</head>
 	<body>
 		<header>
-			<Navbar Logo={navbarProps.Logo} />
+			<Navbar logo={navbarProps.logo} />
 		</header>
 		<slot />
 	</body>

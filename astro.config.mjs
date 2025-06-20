@@ -15,5 +15,8 @@ export default defineConfig({
   i18n: {
     locales: ["es", "en"],
     defaultLocale: "es",
+  },
+  server: {
+    allowedHosts: ["2a76-186-77-205-116.ngrok-free.app", "http://localhost:4321/"]
   }
 });

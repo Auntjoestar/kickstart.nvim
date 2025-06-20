@@ -1,8 +1,10 @@
 @import 'tailwindcss';
-@import 'flowbite/src/themes/default';
-@plugin "flowbite/plugin";
-@source "../../node_modules/flowbite";
 @plugin "@tailwindcss/typography";
+
+@import 'preline/variants.css';
+@source "../../node_modules/preline/dist/*.js";
+/* Plugins */
+@plugin "@tailwindcss/forms";
 
 * {
 	box-sizing: border-box;
@@ -44,4 +46,8 @@
 
 .btn-secondary:hover {
 	@apply bg-tebas-500;
+}
+
+.active {
+	@apply text-tebas-700 rounded-2xl bg-white font-semibold;
 }
