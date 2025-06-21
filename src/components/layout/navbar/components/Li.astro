@@ -11,7 +11,7 @@ const { item, reference, isActive } = Astro.props
 <li>
 	<a
 		href={reference}
-		class="block rounded-sm px-3 py-2 text-white hover:text-[#ffe78c] md:bg-transparent"
+		class="block rounded-sm px-3 py-2 text-white transition-colors hover:cursor-pointer hover:text-[#ffe78c] md:bg-transparent"
 		class:list={{ active: isActive }}
 		aria-current="page"
 	>

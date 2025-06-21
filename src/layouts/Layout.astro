@@ -27,11 +27,13 @@ const navbarProps: NavbarProps = {
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
-		<header>
+	<body class="bg-white text-gray-950 dark:bg-gray-800 dark:text-gray-50">
+		<header class="sticky top-0 z-50">
 			<Navbar logo={navbarProps.logo} />
 		</header>
-		<slot />
+		<main class="relative h-full">
+			<slot />
+		</main>
 	</body>
 </html>
 

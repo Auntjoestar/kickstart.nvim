@@ -12,10 +12,14 @@ const { logo } = Astro.props
 const currentPath = Astro.url.pathname
 ---
 
-<div>
-	<nav class="bg-tebas-700 border-gray-200">
+<div class="top 0 fixed z-50 w-full">
+	<nav class="bg-tebas-700 w-full border-gray-200">
 		<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-1">
-			<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+			<a
+				aria-label="Go back to homepage"
+				href="/"
+				class="flex items-center space-x-3 rtl:space-x-reverse"
+			>
 				<Icon name={logo} class="aspect-[80/26] h-18 w-1/2" />
 			</a>
 			<button
@@ -46,11 +50,11 @@ const currentPath = Astro.url.pathname
 					class="md:bg-tebas-700 bg-tebas-700 mt-4 flex flex-col rounded-lg p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:p-0 rtl:space-x-reverse"
 				>
 					<Li item="Home" reference="/" isActive={currentPath === '/'} />
-					<li class="py-2">
+					<li class="py-2 hover:cursor-pointer">
 						<button
 							id="dropdownNavbarLink"
 							data-dropdown-toggle="dropdownNavbar"
-							class="flex h-full w-full items-center justify-between rounded-sm px-3 text-white hover:bg-gray-100 hover:text-[#ffe78c] md:w-auto md:border-0 md:p-0 md:hover:bg-transparent dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:text-white md:dark:hover:bg-transparent"
+							class="flex h-full w-full items-center justify-between rounded-sm px-3 text-white hover:cursor-pointer hover:bg-gray-100 hover:text-[#ffe78c] md:w-auto md:border-0 md:p-0 md:hover:bg-transparent dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:text-white md:dark:hover:bg-transparent"
 						>
 							Catálogo de casas
 							<svg

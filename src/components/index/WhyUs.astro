@@ -1,5 +1,31 @@
 ---
-
+import WhoWeAreCard from './WhoWeAreCard.astro'
 ---
 
-<div class="w-full">Hola</div>
+<section class="h-9/12 w-full">
+	<div class="relative h-full w-full justify-between gap-0">
+		<div class="mb-2 border-b-2 p-3 text-center text-4xl font-semibold">
+			<h2>¿Por qué preferirnos?</h2>
+		</div>
+		<div class="flex h-full w-full justify-between gap-0">
+			<WhoWeAreCard
+				name="quality"
+				text="Calidad"
+				description="Los materiales manejados por nuestros equipos de construcción están certificado con los estándares de construcción nacionales."
+				bgColor="bg-tebas-300"
+			/>
+			<WhoWeAreCard
+				name="quick"
+				text="Rapidez"
+				description="En Tebas garantizamos que tendrás las llaves de tu casa en la palma de tu mano en tan solo dos o tres meses."
+				bgColor="bg-tebas-500"
+			/>
+			<WhoWeAreCard
+				name="clear"
+				text="Claridad"
+				description="Los términos y el cronograma de la obra serán proporcionados desde un principio al cliente, sin ningún cambio de último minutos."
+				bgColor="bg-tebas-800"
+			/>
+		</div>
+	</div>
+</section>

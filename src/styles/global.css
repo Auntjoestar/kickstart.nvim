@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 
-@import 'preline/variants.css';
-@source "../../node_modules/preline/dist/*.js";
+@import 'flowbite/src/themes/default';
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
 /* Plugins */
 @plugin "@tailwindcss/forms";
 
