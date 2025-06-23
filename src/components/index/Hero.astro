@@ -30,44 +30,42 @@ const {
 } = Astro.props
 ---
 
-<div class="h-11/12 md:h-10/12">
-	<div
-		class="bg-tebas-800/45 flex-column flex h-full items-center bg-cover bg-center bg-blend-overlay md:flex-row md:items-center md:justify-center md:pt-0"
-		aria-label="Hero Section"
-		style={{ 'background-image': `url(${backgroundImage})` }}
-	>
-		<div class="flex w-full max-w-7xl px-12 text-white md:justify-between">
-			<!-- Left Text Column -->
-			<div class="flex w-full flex-col gap-10 text-center md:w-1/2 md:text-left">
-				<div class="w-full md:w-3/5">
-					<h1 class="font-important text-[2.5em] font-bold md:text-6xl">
-						{heading}
-					</h1>
-					<small class="font-secondary mt-4 text-2xl font-semibold text-gray-100">
-						{subheading}
-					</small>
-				</div>
-				<div
-					class="font-secondary flex flex-col items-center gap-4 font-semibold md:flex-row md:items-start"
+<div
+	class="bg-tebas-800/45 flex-column flex w-full items-center bg-cover bg-center py-20 bg-blend-overlay md:flex-row md:items-center md:justify-center"
+	aria-label="Hero Section"
+	style={{ 'background-image': `url(${backgroundImage})` }}
+>
+	<div class="flex w-full max-w-7xl px-12 text-white md:justify-between">
+		<!-- Left Text Column -->
+		<div class="flex w-full flex-col gap-10 text-center md:w-1/2 md:text-left">
+			<div class="w-full md:w-3/5">
+				<h1 class="font-important text-[2.5em] font-bold md:text-6xl">
+					{heading}
+				</h1>
+				<small class="font-secondary mt-4 text-2xl font-semibold text-gray-100">
+					{subheading}
+				</small>
+			</div>
+			<div
+				class="font-secondary flex flex-col items-center gap-4 font-semibold md:flex-row md:items-start"
+			>
+				<a
+					href="#models"
+					class="w-fit rounded bg-cyan-600 px-6 py-3 text-white transition-colors hover:cursor-pointer hover:bg-cyan-700"
+					>{callToAction}</a
 				>
-					<a
-						href="#models"
-						class="w-fit rounded bg-cyan-600 px-6 py-3 text-white transition-colors hover:cursor-pointer hover:bg-cyan-700"
-						>{callToAction}</a
-					>
-					<a
-						class="w-fit rounded bg-cyan-400 px-6 py-3 text-white transition-colors hover:cursor-pointer hover:bg-cyan-500"
-						>{callToAction2}</a
-					>
-				</div>
+				<a
+					class="w-fit rounded bg-cyan-400 px-6 py-3 text-white transition-colors hover:cursor-pointer hover:bg-cyan-500"
+					>{callToAction2}</a
+				>
 			</div>
+		</div>
 
-			<!-- Right Icons Column -->
-			<div class="font-secondary hidden w-20 flex-col gap-1 pt-12 text-white md:flex">
-				<HeroCard name="quality" bg="bg-tebas-300/95" text={reason1} />
-				<HeroCard name="quick" bg="bg-tebas-500/95" text={reason2} />
-				<HeroCard name="clear" bg="bg-tebas-800/95" text={reason3} />
-			</div>
+		<!-- Right Icons Column -->
+		<div class="font-secondary hidden w-20 flex-col gap-1 pt-12 text-white md:flex">
+			<HeroCard name="quality" bg="bg-tebas-300/95" text={reason1} />
+			<HeroCard name="quick" bg="bg-tebas-500/95" text={reason2} />
+			<HeroCard name="clear" bg="bg-tebas-800/95" text={reason3} />
 		</div>
 	</div>
 </div>
