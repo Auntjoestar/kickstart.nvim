@@ -1,35 +1,49 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 
 interface Props {
-	description: string
-	time: string
-	reference: string
-	cta: string
-	logo: ImageMetadata
-	alt: string
-	classList?: string
-	imageClassList?: string
+  description: string;
+  time: string;
+  reference: string;
+  cta: string;
+  logo: ImageMetadata;
+  alt: string;
+  classList?: string;
+  imageClassList?: string;
+  buttonClassList: string[];
 }
 
-const { logo, description, time, reference, cta, alt, classList, imageClassList } = Astro.props
+const {
+  logo,
+  description,
+  time,
+  reference,
+  cta,
+  alt,
+  classList,
+  imageClassList,
+  buttonClassList,
+} = Astro.props;
 ---
 
-<div class="flex flex-col gap-8 p-30" class:list={classList}>
-	<div class="flex items-end">
-		<Image src={logo} alt={alt} class:list={imageClassList} class="w-72" />
-	</div>
-	<div class="flex flex-col gap-8">
-		<p>
-			{description}
-		</p>
-		<p>
-			<span class="font-bold">Tiempo de construcción:</span>
-			<span>{time}</span>
-		</p>
-		<a
-			class="w-fit self-center rounded bg-cyan-600 px-6 py-3 font-semibold text-white transition-colors hover:cursor-pointer hover:bg-cyan-700"
-			href={reference}>{cta}</a
-		>
-	</div>
+<div class="flex flex-col gap-8 px-30 py-20" class:list={classList}>
+  <div class="flex items-end">
+    <figure>
+      <Image src={logo} alt={alt} class:list={imageClassList} class="w-72" />
+    </figure>
+  </div>
+  <div class="flex flex-col gap-8 font-normal text-md">
+    <p>
+      {description}
+    </p>
+    <p>
+      <strong class="font-bold">Tiempo de construcción:</strong>
+      {time}
+    </p>
+    <a
+      class="w-fit self-center rounded px-6 py-3 font-semibold transition-colors hover:cursor-pointer"
+      class:list={buttonClassList}
+      href={reference}>{cta}</a
+    >
+  </div>
 </div>

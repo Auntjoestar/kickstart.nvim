@@ -1,32 +1,32 @@
 ---
-import WhyUsCard from './WhyUsCard.astro'
+import WhyUsCard from "./WhyUsCard.astro";
 ---
 
 <section class="w-full">
-	<div class="flex w-full flex-col">
-		<div class="flex items-center justify-center p-4 text-center text-4xl font-semibold">
-			<h2>¿Por qué preferirnos?</h2>
-		</div>
-		<div class="mb-2 w-11/12 basis-0.5 self-center bg-white"></div>
-		<div class="flex w-full basis-100 justify-between gap-0">
-			<WhyUsCard
-				name="quality"
-				text="Calidad"
-				description="Los materiales manejados por nuestros equipos de construcción están certificado con los estándares de construcción nacionales."
-				bgColor="bg-tebas-400"
-			/>
-			<WhyUsCard
-				name="quick"
-				text="Rapidez"
-				description="En Tebas garantizamos que tendrás las llaves de tu casa en la palma de tu mano en tan solo dos o tres meses."
-				bgColor="bg-tebas-500"
-			/>
-			<WhyUsCard
-				name="clear"
-				text="Claridad"
-				description="Los términos y el cronograma de la obra serán proporcionados desde un principio al cliente, sin ningún cambio de último minutos."
-				bgColor="bg-tebas-800"
-			/>
-		</div>
-	</div>
+  <div class="flex w-full flex-col">
+    <div class="flex items-center justify-center p-4 text-center">
+      <h2 class="font-important text-4xl font-bold">¿Por qué preferirnos?</h2>
+    </div>
+    <div class="mb-2 w-11/12 basis-0.5 self-center bg-white"></div>
+    <div class="flex w-full basis-100 justify-between gap-0">
+      <WhyUsCard
+        name="quality"
+        text="Calidad"
+        description="Los materiales manejados por nuestros equipos de construcción están certificado con los estándares de construcción nacionales."
+        bgColor="bg-tebas-400"
+      />
+      <WhyUsCard
+        name="quick"
+        text="Rapidez"
+        description="En Tebas garantizamos que tendrás las llaves de tu casa en la palma de tu mano en tan solo dos o tres meses."
+        bgColor="bg-tebas-500"
+      />
+      <WhyUsCard
+        name="clear"
+        text="Claridad"
+        description="Los términos y el cronograma de la obra serán proporcionados desde un principio al cliente, sin ningún cambio de último minutos."
+        bgColor="bg-tebas-800"
+      />
+    </div>
+  </div>
 </section>
