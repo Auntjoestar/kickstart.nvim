@@ -2,10 +2,13 @@
 import Model from "./Model.astro";
 import logoTebas from "../../assets/tebas_logo.png";
 import logoBlokon from "../../assets/logo_blokon.png";
+
+const blokOnDescription =
+  "Si buscas un modelo más amigable con tu presupuesto, en Tebas hemos traído esta colaboración exclusiva con Blokon.  Elige entre el modelo que más te guste de las casas prefabricadas Blokon y deja que nosotros nos encarguemos de hacer un hogar perfecto para ti.";
 ---
 
-<section class="flex w-full basis-0.5">
-  <div class="flex relative">
+<section class="flex w-full basis-0.5" id="models">
+  <div class="relative flex">
     <Model
       description="Los modelos Tebas combinan calidad y diseño moderno, con acabados lujosos, garantizando durabilidad y muebles elegantes. Estos son perfectos para ti si buscas una combinación de comodidad, exclusividad y elegancia. Escoge el modelo más adecuado de ti y prepárate para hacer tus sueños realidad."
       time="3 meses"
@@ -13,18 +16,18 @@ import logoBlokon from "../../assets/logo_blokon.png";
       cta="Explorar modelos"
       logo={logoTebas}
       alt="Logo de Tebas"
-      imageClassList="aspect-[1594/524]"
+      imageClassList="aspect-[1594/524] h-26 w-full"
       classList="bg-[#343e4c]"
       buttonClassList={["bg-cyan-600", "hover:bg-cyan-700", "text-white"]}
     />
     <Model
-      description="Si buscas un modelo más amigable con tu presupuesto, en construcciones Tebas hemos traído esta colaboración exclusiva con Blokon. Elige entre el modelo que más te guste de las casas prefabricadas Blokon y deja que nosotros nos encarguemos de hacer un hogar perfecto para ti."
+      description={blokOnDescription}
       time="2 meses"
       reference="/modelos-blok-on"
       cta="Explorar modelos"
       logo={logoBlokon}
       alt="Logo de Blokon"
-      imageClassList="aspect-[964/239] w-[87%]"
+      imageClassList="aspect-[964/239] w-[100%]"
       classList="bg-gray-800"
       buttonClassList={[
         "bg-transparent",
@@ -35,9 +38,9 @@ import logoBlokon from "../../assets/logo_blokon.png";
       ]}
     />
     <div
-      class="absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      class="absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
     >
-      <h2 class="text-4xl font-bold font-important">
+      <h2 class="font-important text-4xl font-bold">
         Elige entre nuestros modelos
       </h2>
     </div>

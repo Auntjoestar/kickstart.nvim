@@ -1,0 +1,118 @@
+---
+import CountryPhoneSelector from "./CountryPhoneSelector.vue";
+import "intl-tel-input/build/css/intlTelInput.css";
+---
+
+<section class="flex gap-10 bg-gray-900 px-35 py-8">
+  <div class="flex flex-col gap-2">
+    <h2 class="font-important text-4xl font-bold">
+      Agenda tu cita con nosotros
+    </h2>
+    <p class="text-base">
+      Si te ha interesado alguno de nuestros modelos o servicios puedes llenar
+      el formulario que te proporcionamos a continuación para que uno de
+      nuestros agentes se ponga en contacto contigo.
+    </p>
+    <hr />
+    <form
+      class="flex flex-col gap-2"
+      method="post"
+      name="contact"
+      id="contactForm"
+    >
+      <fieldset class="flex flex-col gap-2">
+        <legend class="text-lg font-semibold">Información de contacto</legend>
+        <label for="name">Nombre: </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="e.j. Juan José López Pérez"
+          min="1"
+        />
+        <div class="flex justify-between gap-0">
+          <div class="flex flex-col gap-2">
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="e.j. ejemplo@email.com"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="countryPhone">Número de teléfono: </label>
+
+            <CountryPhoneSelector
+              client:visible
+              class="phone-input-wrapper"
+              id="countryPhone"
+            />
+            <div class="flex items-center gap-2">
+              <input
+                type="checkbox"
+                name="hasWhatsapp"
+                id="hasWhatsapp"
+                class="rounded-2xl border-2 border-white text-gray-700"
+              />
+
+              <label for="hasWhatsapp"> ¿Posee Whatsapp? </label>
+            </div>
+          </div>
+        </div>
+        <fieldset class="mb-2 flex flex-col gap-2">
+          <legend class="text-lg font-semibold"
+            >Información de la consulta:
+          </legend>
+          <label class="flex flex-col" for="category">
+            Categoría de la consulta:
+          </label>
+          <select name="category" id="category">
+            <option disabled selected> -- Elige una categoría -- </option>
+            <option value="houses">Casas</option>
+            <option value="tebas">Modelos Tebas</option>
+            <option value="blok-on">Modelos Blok-on</option>
+            <option value="others">Otros servicios</option>
+            <option value="another">Consulta General/Otros temas</option>
+          </select>
+          <label class="flex flex-col" for="message"> Consulta </label>
+          <textarea
+            cols="50"
+            rows="7"
+            id="message"
+            placeholder="Buenas tardes, quería hacer una pregunta con respecto..."
+          ></textarea>
+        </fieldset>
+      </fieldset>
+      <div class="cf-turnstile" data-sitekey="2x00000000000000000000AB"></div>
+      <button
+        class="w-fit rounded bg-cyan-600 px-6 py-3 font-semibold transition-colors hover:cursor-pointer hover:bg-cyan-700"
+        role="button"
+        type="submit">Enviar</button
+      >
+    </form>
+  </div>
+  <aside
+    class="flex aspect-video w-full flex-col items-center justify-start gap-8 overflow-hidden pt-12"
+  >
+    <p class="self-start">
+      O puedes visitarnos en Km. 14 Carretera a Masaya, 4 kilómetros hacia
+      Veracruz. Residencial Casa Blanca, casa b7.
+    </p>
+    <iframe
+      title="Mapa de google maps con la dirección Km. 14 Carretera a Masaya, 4 kilómetros hacia Veracruz. Residencial Casa Blanca, casa b7"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.543945156077!2d-86.17760532576695!3d12.074867988164163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73f8ccad74f691%3A0x408e99da01b92314!2sResidencial%20Casa%20Blanca%2C%20Valle%20Gotel!5e0!3m2!1ses-419!2sni!4v1751409835766!5m2!1ses-419!2sni"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      class="aspect-video h-96 w-full rounded-lg shadow-lg"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </aside>
+</section>
+
+<style>
+  /* --- Styles for intl-tel-input dropdown --- */
+  .phone-input-wrapper {
+    --iti-dialcode-color: var(--color-gray-600);
+  }
+</style>

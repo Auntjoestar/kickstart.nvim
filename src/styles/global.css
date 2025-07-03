@@ -1,7 +1,7 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@import 'flowbite/src/themes/default';
+@import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
@@ -9,47 +9,72 @@
 @plugin "@tailwindcss/forms";
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.iti {
+  --iti-path-flags-1x: url("/home/crisiwii/grupo_tebas/tebas-construcciones/node_modules/intl-tel-input/build/img/flags.webp");
+  --iti-path-flags-2x: url("/home/crisiwii/grupo_tebas/tebas-construcciones/node_modules/intl-tel-input/build/img/flags@2x.webp");
+  --iti-path-globe-1x: url("/home/crisiwii/grupo_tebas/tebas-construcciones/node_modules/intl-tel-input/build/img/globe.webp");
+  --iti-path-globe-2x: url("/home/crisiwii/grupo_tebas/tebas-construcciones/node_modules/intl-tel-input/build/img/globe@2x.webp");
 }
 
 @theme {
-	--font-important: 'Sofia Sans', 'Roboto', 'sans-serif';
-	--font-secondary: 'Roboto', 'sans-serif';
+  --font-important: "Sofia Sans", "Roboto", "sans-serif";
+  --font-secondary: "Roboto", "sans-serif";
 
-	--color-tebas-50: #eefcfd;
-	--color-tebas-100: #d4f6f9;
-	--color-tebas-200: #aeecf3;
-	--color-tebas-300: #76dcea;
-	--color-tebas-400: #37c4d9;
-	--color-tebas-500: #1ba8bf;
-	--color-tebas-600: #187e96; /*Original*/
-	--color-tebas-700: #1c6c82;
-	--color-tebas-800: #1f596b;
-	--color-tebas-900: #1e4a5b;
-	--color-tebas-950: #0e303e;
-	--color-tebas-special: #26c5ea;
+  --color-tebas-50: #eefcfd;
+  --color-tebas-100: #d4f6f9;
+  --color-tebas-200: #aeecf3;
+  --color-tebas-300: #76dcea;
+  --color-tebas-400: #37c4d9;
+  --color-tebas-500: #1ba8bf;
+  --color-tebas-600: #187e96; /*Original*/
+  --color-tebas-700: #1c6c82;
+  --color-tebas-800: #1f596b;
+  --color-tebas-900: #1e4a5b;
+  --color-tebas-950: #0e303e;
+  --color-tebas-special: #26c5ea;
+}
+
+input:not([type="checkbox"]),
+select,
+textarea {
+  @apply rounded-xl text-gray-800 dark:bg-gray-700 dark:text-gray-50;
+}
+
+label {
+  @apply font-medium;
+}
+
+.iti__country-name {
+  @apply text-gray-800 dark:text-gray-50;
+}
+
+.iti__dropdown-content {
+  --iti-dropdown-bg: var(--color-gray-700);
 }
 
 .btn {
-	@apply rounded-lg px-4 py-2 font-bold shadow;
+  @apply rounded-lg px-4 py-2 font-bold shadow;
 }
 
 .btn-primary {
-	@apply bg-tebas-600 text-white;
+  @apply bg-tebas-600 text-white;
 }
 
 .btn-primary:hover {
-	@apply bg-tebas-700;
+  @apply bg-tebas-700;
 }
 
 .btn-secondary {
-	@apply bg-tebas-400;
+  @apply bg-tebas-400;
 }
 
 .btn-secondary:hover {
-	@apply bg-tebas-500;
+  @apply bg-tebas-500;
 }
 
 .active {
-	@apply text-tebas-700 rounded-2xl bg-white font-semibold;
+  @apply text-tebas-700 rounded-2xl bg-white font-semibold;
 }

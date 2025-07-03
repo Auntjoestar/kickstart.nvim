@@ -1,0 +1,146 @@
+---
+import { Icon } from "astro-icon/components";
+
+const year = new Date().getFullYear();
+
+// IMPORTANT: Replace this with your actual Google Maps Embed URL
+// You can get this by going to Google Maps, searching for the location,
+// clicking 'Share', then 'Embed a map', and copying the src from the iframe code.
+const googleMapsEmbedUrl =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.543945156077!2d-86.17760532576695!3d12.074867988164163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73f8ccad74f691%3A0x408e99da01b92314!2sResidencial%20Casa%20Blanca%2C%20Valle%20Gotel!5e0!3m2!1ses-419!2sni!4v1751409835766!5m2!1ses-419!2sn";
+---
+
+<footer class="flex h-full flex-col bg-gray-800 text-white">
+  <nav class="flex flex-wrap justify-around gap-10 px-10 pt-8 pb-5">
+    <section class="mb-8 flex flex-col gap-4">
+      <h2 class="text-tebas-400 font-bold uppercase">Contacto</h2>
+      <ul>
+        <li><h3>Directora de ventas</h3></li>
+        <li>Tania Valeria García Escobar</li>
+        <li>+505 7798 8555</li>
+        <li>taniav2garcia@gmail.com</li>
+      </ul>
+    </section>
+    <section class="mb-8 flex flex-col gap-4">
+      <h2 class="text-tebas-400 font-bold uppercase">Enlaces</h2>
+      <ul>
+        <li>
+          <a href="/" class="hover:text-tebas-400 transition-colors">Home</a>
+        </li>
+        <li>
+          <a href="/contactanos" class="hover:text-tebas-400 transition-colors"
+            >Contáctanos</a
+          >
+        </li>
+        <li>
+          <a
+            href="/modelos-blok-on"
+            class="hover:text-tebas-400 transition-colors">Modelos Blok-on</a
+          >
+        </li>
+        <li>
+          <a
+            href="/modelos-tebas"
+            class="hover:text-tebas-400 transition-colors">Modelos Tebas</a
+          >
+        </li>
+        <li>
+          <a href="/galeria" class="hover:text-tebas-400 transition-colors"
+            >Galería</a
+          >
+        </li>
+        <li>
+          <a href="/contactanos" class="hover:text-tebas-400 transition-colors"
+            >Contáctanos</a
+          >
+        </li>
+      </ul>
+    </section>
+    <section class="mb-8 flex w-full max-w-sm flex-col gap-4">
+      <h2 class="text-tebas-400 font-bold uppercase">Ubicanos</h2>
+      <p>
+        Km. 14 Carretera a Masaya, 4 kilómetros hacia Veracruz. Residencial Casa
+        Blanca, casa b7.
+      </p>
+      <aside
+        class="flex aspect-square w-full flex-col items-center justify-start overflow-hidden rounded-lg shadow-lg"
+      >
+        <iframe
+          title="Mapa de google maps con la dirección Km. 14 Carretera a Masaya, 4 kilómetros hacia Veracruz. Residencial Casa Blanca, casa b7"
+          src={googleMapsEmbedUrl}
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          class="aspect-square h-full w-full rounded"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </aside>
+    </section>
+    <section class="mb-8 flex flex-col gap-4">
+      <h2 class="text-tebas-400 font-bold uppercase">Siguenos</h2>
+      <ul class="flex gap-4 text-3xl">
+        <li>
+          <a
+            href="https://www.facebook.com/share/19bHFMUjYo/"
+            aria-label="Facebook"
+            class="hover:text-tebas-400 transition-colors"
+            target="_blank"
+            data-action="open"
+            role="button"
+            rel="noopener noreferrer"><Icon name="ic:baseline-facebook" /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.tiktok.com/@construccion.grupotebas"
+            aria-label="TikTok"
+            class="hover:text-tebas-400 transition-colors"
+            target="_blank"
+            data-action="open"
+            role="button"
+            rel="noopener noreferrer"><Icon name="ic:baseline-tiktok" /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/grupo_tebas/"
+            aria-label="Instagram"
+            class="hover:text-tebas-400 transition-colors"
+            target="_blank"
+            data-action="open"
+            role="button"
+            rel="noopener noreferrer"><Icon name="mdi:instagram" /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://wa.me/+50577988555?text=Buenas tardes, estoy aquí por la página web ¿Podría compartirme el cátalogo de modelos?"
+            aria-label="WhatsApp"
+            class="hover:text-tebas-400 transition-colors"
+            target="_blank"
+            data-action="open"
+            data-phone="50577988555"
+            data-message="Buenas tardes, estoy aquí por la página web ¿Podría compartirme el cátalogo de modelos?"
+            role="button"
+            rel="noopener noreferrer"><Icon name="ic:baseline-whatsapp" /></a
+          >
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <div
+    class="flex w-full items-center justify-center bg-gray-950 p-6 text-xl text-gray-400"
+  >
+    <small>
+      Copyright ©{year} Tebas: construcciones, soluciones y diseños
+    </small>
+  </div>
+</footer>
+
+<style>
+  @import "tailwindcss";
+  li {
+    @apply text-gray-200;
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+import { Icon } from "astro-icon/components";
+import Image from "astro/components/Image.astro";
+
+interface Props {
+  title: string;
+  img: string;
+  imgAlt: string;
+  width: number;
+  height: number;
+  description: string;
+  bedrooms: number;
+  bathrooms: number;
+  area: number;
+  className: string;
+}
+
+const {
+  title,
+  description,
+  img,
+  imgAlt,
+  width,
+  height,
+  bedrooms,
+  bathrooms,
+  area,
+  className,
+} = Astro.props;
+---
+
+<div
+  class=`flex w-full flex-row rounded-lg border border-gray-200 bg-white shadow-lg ${className}`
+>
+  <a href={img} target="_blank">
+    <Image
+      class="object-fit aspect-video h-full w-full rounded border border-gray-600 object-cover"
+      src={img}
+      alt={imgAlt}
+      inferSize={true}
+    />
+  </a>
+  <div class="flex flex-col gap-2">
+    <a href="#">
+      <h2
+        class="mb-2 px-5 pt-5 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >
+        {title}
+      </h2>
+    </a>
+    <p class="h-36 overflow-hidden px-5 text-ellipsis">
+      {`${description}`}
+    </p>
+    <ol class="flex justify-around border-t border-b border-gray-600 p-5">
+      <li class="flex gap-1">
+        <Icon name="mdi:bedroom" class="size-6" />{
+          `${bedrooms} ${bedrooms == 1 ? "Cuarto" : "Cuartos"}`
+        }
+      </li>
+      <li class="flex gap-1">
+        <Icon name="mdi:bathroom" class="size-6" />
+        {`${bathrooms} ${bathrooms == 1 ? "Baño" : "Baños"}`}
+      </li>
+      <li class="flex gap-1">
+        <Icon name="ic:baseline-house" class="size-6" />
+        {`${area} m²`}
+      </li>
+    </ol>
+
+    <a
+      href="#"
+      class="my-4 w-fit self-center rounded bg-cyan-600 px-6 py-3 font-semibold transition-colors hover:cursor-pointer hover:bg-cyan-700"
+    >
+      Ver más
+    </a>
+  </div>
+</div>

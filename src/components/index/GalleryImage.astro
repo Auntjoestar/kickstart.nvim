@@ -1,0 +1,19 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  imgSrc: ImageMetadata;
+  imgAlt: string;
+}
+
+const { imgSrc, imgAlt } = Astro.props;
+---
+
+<figure class="size-65 rounded-2xl">
+  <Image
+    src={imgSrc}
+    alt={imgAlt}
+    class="w-full h-full aspect-square rounded-2xl object-cover"
+  />
+</figure>

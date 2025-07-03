@@ -26,13 +26,13 @@ const {
 } = Astro.props;
 ---
 
-<div class="flex flex-col gap-8 px-30 py-20" class:list={classList}>
+<section class="flex flex-col gap-8 px-30 py-20" class:list={classList}>
   <div class="flex items-end">
     <figure>
       <Image src={logo} alt={alt} class:list={imageClassList} class="w-72" />
     </figure>
   </div>
-  <div class="flex flex-col gap-8 font-normal text-md">
+  <div class="text-md flex flex-col gap-8 font-normal">
     <p>
       {description}
     </p>
@@ -46,4 +46,4 @@ const {
       href={reference}>{cta}</a
     >
   </div>
-</div>
+</section>
