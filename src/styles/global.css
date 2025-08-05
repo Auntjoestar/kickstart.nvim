@@ -13,10 +13,10 @@
 }
 
 .iti {
-  --iti-path-flags-1x: url("/home/crisiwii/grupo_tebas/tebas-construcciones/node_modules/intl-tel-input/build/img/flags.webp");
-  --iti-path-flags-2x: url("/home/crisiwii/grupo_tebas/tebas-construcciones/node_modules/intl-tel-input/build/img/flags@2x.webp");
-  --iti-path-globe-1x: url("/home/crisiwii/grupo_tebas/tebas-construcciones/node_modules/intl-tel-input/build/img/globe.webp");
-  --iti-path-globe-2x: url("/home/crisiwii/grupo_tebas/tebas-construcciones/node_modules/intl-tel-input/build/img/globe@2x.webp");
+  --iti-path-flags-1x: url("/img/flags.webp");
+  --iti-path-flags-2x: url("/img/flags@2x.webp");
+  --iti-path-globe-1x: url("/img/globe.webp");
+  --iti-path-globe-2x: url("/img/globe@2x.webp");
 }
 
 @theme {
