@@ -1,0 +1,9 @@
+name = "Promesa"
+shortDescription = "Esta vivienda es la promesa de un futuro lleno de confort y diseño. La cocina cuenta con un desayunador, muebles de madera y top de granito, perfectos para tu día a día. Con porche, área de lavado y secado, y todas las esperas para aires acondicionados y sistemas de seguridad, tu hogar ideal está a solo dos meses de distancia."
+banner = "../../assets/models/modelo_promesa.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Promesa y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 2
+bathrooms = 1
+area = 56.5

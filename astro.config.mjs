@@ -18,7 +18,7 @@ export default defineConfig({
   },
   server: {
     allowedHosts: [
-      "2a76-186-77-205-116.ngrok-free.app",
+      "etdw4v-ip-186-77-204-197.tunnelmole.net",
       "http://localhost:4321/",
     ],
   },

@@ -1,0 +1,9 @@
+name = "Zoe"
+shortDescription = "Un hogar que combina elegancia y funcionalidad. Este modelo destaca por sus dos baños completos y un espacio para Walk in Closet, ofreciendo un nivel de comodidad superior. La cocina con desayunador, muebles de madera y top de granito, junto con las esperas para aires acondicionados y sistemas de seguridad, hacen de esta casa una opción excepcional."
+banner = "../../assets/models/modelo_zoe.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Zoe y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 2
+bathrooms = 2
+area = 57.0

@@ -1,0 +1,9 @@
+name = "Azucena"
+shortDescription = "Este modelo te da la bienvenida a un estilo de vida moderno y cómodo. Con una cocina funcional, equipada con muebles de madera y top de granito, además de un porche y un área de lavado y secado, esta casa es ideal para quienes buscan su primer hogar. Se entrega lista en tan solo dos meses, con esperas para aires acondicionados y circuitos de seguridad."
+banner = "../../assets/models/modelo_azucena.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Azucena y plano de distribución"
+bannerWidth = 998
+bannerHeight = 582
+bedrooms = 2
+bathrooms = 1
+area = 36.48

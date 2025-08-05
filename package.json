@@ -10,10 +10,14 @@
   },
   "dependencies": {
     "@astrojs/vue": "^5.1.0",
+    "@uploadthing/react": "^7.3.2",
     "astro": "^5.8.0",
+    "ci-info": "^4.3.0",
+    "entities": "2.2.0",
     "flowbite": "^3.1.2",
     "intl-tel-input": "^25.3.1",
     "tailwindcss": "^4.1.7",
+    "uploadthing": "^7.7.3",
     "vue": "^3.5.15"
   },
   "devDependencies": {

@@ -1,0 +1,59 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+const services = await getCollection("services");
+---
+
+<Layout>
+  <div class="flex flex-col gap-8 px-4 pt-8 md:px-40">
+    <h1 class="text-4xl font-bold">Otros servicios</h1>
+    <p>
+      En Grupo Tebas realizamos cualquier tipo de construcciones. Aquí puedes
+      encontrar un catálogo de algunos de los servicios puestos a tu
+      disposición.
+    </p>
+
+    <ol class="grid grid-cols-1 gap-8 pt-2 pb-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        services.map((service) => (
+          <li class="flex">
+            <div class="flex w-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-600 dark:bg-gray-700">
+              <a href="#">
+                <Image
+                  class="aspect-video w-full object-cover"
+                  src={service.data.image}
+                  alt={`Imagen de ${service.data.title}`}
+                  width={400}
+                  height={300}
+                  fit="cover"
+                />
+              </a>
+              <div class="flex grow flex-col justify-between p-5">
+                <div>
+                  <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      {service.data.title}
+                    </h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    {service.data.description}
+                  </p>
+                </div>
+
+                <a
+                  href="#"
+                  class="flex w-fit self-center rounded bg-cyan-600 px-6 py-3 font-semibold transition-colors hover:cursor-pointer hover:bg-cyan-700"
+                  role="button"
+                >
+                  Ver más
+                </a>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</Layout>

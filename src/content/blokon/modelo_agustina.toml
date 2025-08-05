@@ -1,0 +1,9 @@
+name = "Agustina"
+shortDescription = "Un diseño pensado para el máximo confort y la vida en familia. Este modelo destaca por su desayunador y espacio para Walk in Closet, ofreciendo un toque de lujo a tu día a día. Con una cocina de muebles de madera y top de granito, dos baños completos y las esperas para sistemas de seguridad, esta casa es la elección perfecta."
+banner = "../../assets/models/modelo_agustina.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Agustina y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 3
+bathrooms = 2
+area = 91.5

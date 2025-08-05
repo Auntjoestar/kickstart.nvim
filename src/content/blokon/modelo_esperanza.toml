@@ -1,0 +1,9 @@
+name = "Esperanza"
+shortDescription = "Un diseño funcional que maximiza cada espacio para tu confort. Este modelo cuenta con una cocina elegante, equipada con muebles de madera y top de granito. Con un porche y área de lavado y secado, y todas las esperas para aires acondicionados, TV y cámaras de seguridad, esta casa es perfecta para quienes valoran la eficiencia y la calidad."
+banner = "../../assets/models/modelo_esperanza.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Esperanza y plano de distribución"
+bannerWidth = 1000
+bannerHeight = 582
+bedrooms = 2
+bathrooms = 1
+area = 42.86

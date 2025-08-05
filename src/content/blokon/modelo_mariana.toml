@@ -1,0 +1,9 @@
+name = "Mariana"
+shortDescription = "Un hogar que eleva la comodidad a otro nivel. Este modelo incluye un práctico desayunador, una cocina con muebles de madera y top de granito, y todas las esperas para aires acondicionados y circuitos de seguridad. Con porche y área de lavado y secado, esta casa está diseñada para que vivas con estilo y sin preocupaciones."
+banner = "../../assets/models/modelo_mariana.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Mariana y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 2
+bathrooms = 1
+area = 56.0

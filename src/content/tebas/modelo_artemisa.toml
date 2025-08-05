@@ -1,0 +1,9 @@
+name = "Modelo Artemisa"
+shortDescription = "Descubre el hogar perfecto para un estilo de vida moderno y cómodo. Con una cocina equipada con muebles de madera, top de granito y extractor de grasa , cada detalle ha sido diseñado para la funcionalidad y el buen gusto. Además, cuenta con un porche, terraza, área de lavado y secado, y todas las esperas para aires acondicionados, TV y cámaras de seguridad."
+bedrooms = 2
+bathrooms = 1
+area = 76
+banner = "../../assets/models/modelo_artemisa.jpg"
+bannerAlt = "Render del modelo Artemisa."
+bannerWidth = 624
+bannerHeight = 524

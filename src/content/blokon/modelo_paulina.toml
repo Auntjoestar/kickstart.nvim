@@ -1,0 +1,9 @@
+name = "Paulina"
+shortDescription = "El hogar de tus sueños, con espacio para toda la familia. Este modelo de cuatro cuartos ofrece una cocina con desayunador, muebles de madera y top de granito, junto con dos baños completos. El porche y el área de lavado y secado complementan un diseño pensado para la vida familiar, con esperas para aires acondicionados y sistemas de seguridad."
+banner = "../../assets/models/modelo_paulina.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Paulina y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 4
+bathrooms = 2
+area = 108.28

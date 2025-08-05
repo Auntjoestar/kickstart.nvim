@@ -1,0 +1,9 @@
+name = "Modelo Atenea"
+shortDescription = "La combinación perfecta de lujo y practicidad te espera en este hogar. Con una cocina de diseño, equipada con muebles de madera y top de granito , y la comodidad de dos baños completos con grifería fina. Este modelo también ofrece un espacio para Walk in Closet , un amplio garaje con portón eléctrico , y esperas para aires acondicionados, TV y cámaras de seguridad."
+bedrooms = 2
+bathrooms = 2
+area = 129
+banner = "../../assets/models/modelo_atenea.jpg"
+bannerAlt = "Render del modelo Atenea."
+bannerWidth = 1024
+bannerHeight = 599

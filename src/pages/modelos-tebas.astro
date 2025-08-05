@@ -1,17 +1,16 @@
 ---
 import ModelCard from "../components/models/ModelCard.astro";
 import Layout from "../layouts/Layout.astro";
-import Artemisa from "../assets/images/grupo_tebas_1.jpeg";
-import { getModelsInfo } from "../lib/queries/getModelsInformation";
+import { getCollection } from "astro:content";
 
-const models = await getModelsInfo();
+const models = await getCollection("tebas");
 ---
 
 <Layout>
   <div class="flex flex-col gap-8 px-40 pt-8">
     <h1 class="text-4xl font-bold">Modelos Tebas</h1>
     <p>
-      Lo modelos Tebas se distinguen por su entrega completa exactamente en 3
+      Los modelos Tebas se distinguen por su entrega completa exactamente en 3
       meses, sus materiales de calidad superior y por su habilidad de adaptarse
       en necesidad y gusto del cliente debido a que tenemos arquitectos con
       basta experiencia los cuales le ayudaran a construir la casa de sus
@@ -31,18 +30,18 @@ const models = await getModelsInfo();
             modelItems.push(
               <li>
                 <ModelCard
-                  title={model.name}
-                  img={model.Banner.url}
-                  imgAlt={model.Banner.alternativeText}
-                  width={model.Banner.width}
-                  height={model.Banner.height}
-                  description={model.shortDescription}
-                  bedrooms={model.bedrooms}
-                  bathrooms={model.bathrooms}
-                  area={model.area}
+                  title={model.data.name}
+                  img={model.data.banner}
+                  imgAlt={model.data.bannerAlt}
+                  width={model.data.bannerWidth}
+                  height={model.data.bannerHeight}
+                  description={model.data.shortDescription}
+                  bedrooms={model.data.bedrooms}
+                  bathrooms={model.data.bathrooms}
+                  area={model.data.area}
                   className={bgColor}
                 />
-              </li>
+              </li>,
             );
           }
           return modelItems;

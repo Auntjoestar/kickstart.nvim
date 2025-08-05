@@ -1,0 +1,9 @@
+name = "Modelo Apolo"
+shortDescription = "Vive con amplitud y estilo en este hogar diseñado para tu confort. La cocina cuenta con muebles de madera, top de granito y extractor de grasa , complementando la sofisticación de sus dos baños completos con grifería fina y cortina de vidrio templado. Disfruta de una terraza, porche y área de lavado y secado, con esperas para aires acondicionados, TV y cámaras de seguridad ya incluidas."
+bedrooms = 3
+bathrooms = 2
+area = 114
+banner = "../../assets/models/modelo_apolo.jpg"
+bannerAlt = "Render del modelo Apolo."
+bannerWidth = 712
+bannerHeight = 537

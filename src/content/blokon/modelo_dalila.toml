@@ -1,0 +1,9 @@
+name = "Dalila"
+shortDescription = "Disfruta de la combinación perfecta entre un diseño moderno y una distribución inteligente. La cocina incluye muebles de madera, top de granito y extractor de grasa, mientras que el porche y el área de lavado y secado añaden funcionalidad a tu día a día. Con esperas para aires acondicionados y sistemas de seguridad, tu nuevo hogar estará listo en solo dos meses."
+banner = "../../assets/models/modelo_dalila.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Dalila y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 2
+bathrooms = 1
+area = 47.0

@@ -1,0 +1,9 @@
+name = "Estrella"
+shortDescription = "Una estrella en confort y diseño. Este modelo cuenta con una distribución de tres cuartos y dos baños, una cocina con muebles de madera y top de granito, y un porche y área de lavado y secado. Las esperas para aires acondicionados y sistemas de seguridad están incluidas, garantizando que tu nuevo hogar brille por su funcionalidad y modernidad."
+banner = "../../assets/models/modelo_estrella.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Estrella y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 3
+bathrooms = 2
+area = 81.0

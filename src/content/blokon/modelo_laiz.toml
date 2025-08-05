@@ -1,0 +1,9 @@
+name = "Laiz"
+shortDescription = "Diseño y practicidad se unen en este modelo para ofrecerte un espacio de vida acogedor. Disfruta de una cocina bien equipada con desayunador, muebles de madera y top de granito. Con porche, área de lavado y secado, y todas las esperas para tecnología y seguridad, esta casa está lista para convertirse en tu nuevo hogar en solo dos meses."
+banner = "../../assets/models/modelo_laiz.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Laiz y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 2
+bathrooms = 1
+area = 67.5

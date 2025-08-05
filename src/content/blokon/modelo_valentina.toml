@@ -1,0 +1,9 @@
+name = "Valentina"
+shortDescription = "Espacio y funcionalidad se combinan en este modelo, ideal para quienes buscan un hogar versátil. La cocina está equipada con muebles de madera y top de granito, y los dos baños completos garantizan la comodidad de toda la familia. Con porche, área de lavado y secado, y esperas para tecnología y seguridad, esta casa está diseñada para tu bienestar."
+banner = "../../assets/models/modelo_valentina.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Valentina y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 3
+bathrooms = 2
+area = 98.0

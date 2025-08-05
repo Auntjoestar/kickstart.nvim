@@ -1,0 +1,52 @@
+---
+import ModelCard from "../components/models/ModelCard.astro";
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const models = await getCollection("blokon");
+---
+
+<Layout>
+  <div class="flex flex-col gap-8 px-40 pt-8">
+    <h1 class="text-4xl font-bold">Modelos Blok-on</h1>
+    <p>
+      Si buscas una opción más accesible, te presentamos nuestra colaboración
+      exclusiva con Blok-On. Este sistema constructivo, rápido y eficiente,
+      combina bloques de concreto y acero de alta resistencia para ofrecerte una
+      casa segura, duradera y económica, sin sacrificar la calidad que nos
+      define.
+    </p>
+    <ol class="flex flex-wrap justify-center gap-8 px-8 pt-2 pb-8">
+      {
+        (() => {
+          const modelItems = [];
+          for (let i = 0; i < models.length; i++) {
+            const bgColor =
+              i % 2 === 0
+                ? "dark:bg-gray-700 dark:border-gray-600 flex-row-reverse"
+                : "dark:bg-gray-800 dark:border-gray-700";
+
+            const model = models[i];
+            modelItems.push(
+              <li>
+                <ModelCard
+                  title={model.data.name}
+                  img={model.data.banner}
+                  imgAlt={model.data.bannerAlt}
+                  width={model.data.bannerWidth}
+                  height={model.data.bannerHeight}
+                  description={model.data.shortDescription}
+                  bedrooms={model.data.bedrooms}
+                  bathrooms={model.data.bathrooms}
+                  area={model.data.area}
+                  className={bgColor}
+                />
+              </li>,
+            );
+          }
+          return modelItems;
+        })()
+      }
+    </ol>
+  </div>
+</Layout>

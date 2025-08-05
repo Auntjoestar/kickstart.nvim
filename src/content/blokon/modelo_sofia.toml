@@ -1,0 +1,9 @@
+name = "Sofia"
+shortDescription = "Elegancia y espacio se unen en este hogar. Con una distribución de tres cuartos, dos baños completos, y una cocina con muebles de madera y top de granito, este modelo es sinónimo de comodidad. Disfruta de un porche, área de lavado y secado, y todas las esperas para tecnología y seguridad, listo en tan solo dos meses."
+banner = "../../assets/models/modelo_sofia.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Sofia y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 3
+bathrooms = 2
+area = 85.0

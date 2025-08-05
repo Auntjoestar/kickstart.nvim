@@ -1,0 +1,9 @@
+name = "Modelo Midas"
+shortDescription = "Experimenta la grandeza en cada rincón de este espacioso hogar. Con 254 m2, cuenta con una cocina de muebles de madera y top de granito , y cuatro baños completos con grifería fina. Disfruta de un desayunador, porche, terraza, y un amplio garaje frontal , además de las esperas para aires acondicionados, TV y cámaras de seguridad."
+bedrooms = 4
+bathrooms = 4
+area = 254
+banner = "../../assets/models/modelo_midas.jpg"
+bannerAlt = "Render del modelo Midas."
+bannerWidth = 1024
+bannerHeight = 470

@@ -1,0 +1,9 @@
+name = "Victoria"
+shortDescription = "La victoria de encontrar el hogar perfecto. Con una distribución ideal de tres cuartos, una cocina con desayunador, muebles de madera y top de granito, y dos baños completos, esta casa está diseñada para el crecimiento de tu familia. Además, incluye porche, área de lavado y secado, y esperas para aires acondicionados y sistemas de seguridad."
+banner = "../../assets/models/modelo_victoria.jpg"
+bannerAlt = "Propuesta de fachada del Modelo Victoria y plano de distribución"
+bannerWidth = 999
+bannerHeight = 582
+bedrooms = 3
+bathrooms = 2
+area = 74.5
