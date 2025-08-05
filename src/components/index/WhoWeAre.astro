@@ -5,10 +5,22 @@ import why_us from "../../assets/why_us.jpg";
 
 <section>
   <div
-    class="font-secondary flex w-full justify-around gap-20 bg-gray-300 px-30 py-8 not-dark:text-gray-800 dark:bg-gray-700"
+    class="font-secondary flex w-full flex-col justify-center gap-20 bg-gray-300 px-6 py-8 not-dark:text-gray-800 md:flex-row md:items-stretch md:justify-around md:px-30 dark:bg-gray-700"
   >
     <div class="flex flex-col justify-center gap-8">
-      <h2 class="text-4xl font-bold font-important">¿Quienes somos?</h2>
+      <h2
+        class="font-important text-center text-3xl font-bold md:text-left md:text-4xl"
+      >
+        ¿Quienes somos?
+      </h2>
+      <div class="block md:hidden">
+        <Image
+          src={why_us}
+          alt="Tebas Proyect"
+          class="m-auto size-70 rounded-2xl"
+          loading="eager"
+        />
+      </div>
       <p class="prose text-lg text-gray-50">
         En Grupo Tebas ofrecemos soluciones en el rubro de la construcción
         garantizando un servicio ágil y sin contratiempos. ¿Estás buscando hacer
@@ -18,7 +30,7 @@ import why_us from "../../assets/why_us.jpg";
         para tener las llaves de tu casa en menos de noventa días.
       </p>
     </div>
-    <div>
+    <div class="hidden md:block">
       <Image
         src={why_us}
         alt="Tebas Proyect"

@@ -10,10 +10,10 @@ interface Props {
 const { imgSrc, imgAlt } = Astro.props;
 ---
 
-<figure class="size-65 rounded-2xl">
+<figure class="h-full w-full rounded-2xl">
   <Image
     src={imgSrc}
     alt={imgAlt}
-    class="w-full h-full aspect-square rounded-2xl object-cover"
+    class="aspect-square h-full w-full rounded-2xl object-cover"
   />
 </figure>

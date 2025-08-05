@@ -3,99 +3,120 @@ import CountryPhoneSelector from "./CountryPhoneSelector.vue";
 import "intl-tel-input/build/css/intlTelInput.css";
 ---
 
-<section class="flex gap-10 bg-gray-900 px-35 py-8">
-  <div class="flex flex-col gap-2">
-    <h2 class="font-important text-4xl font-extrabold text-sky-400">
+<section
+  class="flex flex-col gap-10 overflow-hidden bg-gray-900 px-4 py-8 sm:px-6 md:px-10 lg:flex-row lg:px-35"
+>
+  <div class="flex w-full flex-col gap-4 lg:w-1/2">
+    <h2 class="font-important text-3xl font-extrabold text-sky-400 sm:text-4xl">
       Agenda tu cita con nosotros
     </h2>
-    <p class="text-base">
+    <p class="text-base text-white">
       Si te ha interesado alguno de nuestros modelos o servicios puedes llenar
       el formulario que te proporcionamos a continuación para que uno de
       nuestros agentes se ponga en contacto contigo.
     </p>
-    <hr />
+    <hr class="border-gray-700" />
+
     <form
-      class="flex flex-col gap-2"
+      class="flex w-full flex-col gap-4"
       method="post"
       name="contact"
       id="contactForm"
     >
-      <fieldset class="flex flex-col gap-2">
-        <legend class="text-lg font-semibold">Información de contacto</legend>
-        <label for="name">Nombre: </label>
+      <fieldset class="flex w-full flex-col gap-4">
+        <legend class="text-lg font-semibold text-white"
+          >Información de contacto</legend
+        >
+
+        <label for="name" class="text-white">Nombre:</label>
         <input
           type="text"
           id="name"
           name="name"
           placeholder="e.j. Juan José López Pérez"
-          min="1"
+          class="w-full rounded p-2"
         />
-        <div class="flex justify-between gap-0">
-          <div class="flex flex-col gap-2">
-            <label for="email">Email: </label>
+
+        <!-- Email + Phone Responsive -->
+        <div class="flex w-full flex-col gap-4 md:flex-row">
+          <div class="flex w-full flex-col gap-2">
+            <label for="email" class="text-white">Email:</label>
             <input
               type="email"
               name="email"
               id="email"
               placeholder="e.j. ejemplo@email.com"
+              class="w-full rounded p-2"
             />
           </div>
-          <div class="flex flex-col gap-2">
-            <label for="countryPhone">Número de teléfono: </label>
 
+          <div class="flex w-full flex-col gap-2">
+            <label for="countryPhone" class="text-white"
+              >Número de teléfono:</label
+            >
             <CountryPhoneSelector
               client:visible
-              class="phone-input-wrapper"
+              class="phone-input-wrapper w-full"
               id="countryPhone"
             />
-            <div class="flex items-center gap-2">
+            <div class="mt-2 flex items-center gap-2">
               <input
                 type="checkbox"
                 name="hasWhatsapp"
                 id="hasWhatsapp"
                 class="rounded-2xl border-2 border-white text-gray-700"
               />
-
-              <label for="hasWhatsapp"> ¿Posee Whatsapp? </label>
+              <label for="hasWhatsapp" class="text-white"
+                >¿Posee Whatsapp?</label
+              >
             </div>
           </div>
         </div>
-        <fieldset class="mb-2 flex flex-col gap-2">
-          <legend class="text-lg font-semibold"
-            >Información de la consulta:
-          </legend>
-          <label class="flex flex-col" for="category">
-            Categoría de la consulta:
-          </label>
-          <select name="category" id="category">
-            <option disabled selected> -- Elige una categoría -- </option>
+
+        <!-- Consultation Info -->
+        <fieldset class="mb-2 flex w-full flex-col gap-2">
+          <legend class="text-lg font-semibold text-white"
+            >Información de la consulta:</legend
+          >
+
+          <label for="category" class="text-white"
+            >Categoría de la consulta:</label
+          >
+          <select name="category" id="category" class="w-full rounded p-2">
+            <option disabled selected>-- Elige una categoría --</option>
             <option value="houses">Casas</option>
             <option value="tebas">Modelos Tebas</option>
             <option value="blok-on">Modelos Blok-on</option>
             <option value="others">Otros servicios</option>
             <option value="another">Consulta General/Otros temas</option>
           </select>
-          <label class="flex flex-col" for="message"> Consulta </label>
+
+          <label for="message" class="text-white">Consulta:</label>
           <textarea
-            cols="50"
-            rows="7"
             id="message"
+            rows="6"
             placeholder="Buenas tardes, quería hacer una pregunta con respecto..."
-          ></textarea>
+            class="w-full rounded p-2"></textarea>
         </fieldset>
       </fieldset>
+
       <div class="cf-turnstile" data-sitekey=""></div>
+
       <button
-        class="w-fit rounded bg-cyan-600 px-6 py-3 font-semibold transition-colors hover:cursor-pointer hover:bg-cyan-700"
+        class="w-fit rounded bg-cyan-600 px-6 py-3 font-semibold text-white transition-colors hover:cursor-pointer hover:bg-cyan-700"
         role="button"
-        type="submit">Enviar</button
+        type="submit"
       >
+        Enviar
+      </button>
     </form>
   </div>
+
+  <!-- Right side: Map -->
   <aside
-    class="flex aspect-video w-full flex-col items-center justify-start gap-8 overflow-hidden pt-12"
+    class="flex w-full flex-col items-center justify-start gap-6 pt-6 lg:w-1/2"
   >
-    <p class="self-start">
+    <p class="self-start text-sm text-white sm:text-base">
       O puedes visitarnos en Km. 14 Carretera a Masaya, 4 kilómetros hacia
       Veracruz. Residencial Casa Blanca, casa b7.
     </p>
@@ -105,13 +126,12 @@ import "intl-tel-input/build/css/intlTelInput.css";
       style="border:0;"
       allowfullscreen=""
       loading="lazy"
-      class="aspect-video h-96 w-full rounded-lg shadow-lg"
+      class="aspect-video h-64 w-full rounded-lg shadow-lg sm:h-80 md:h-96"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </aside>
 </section>
 
 <style>
-  /* --- Styles for intl-tel-input dropdown --- */
   .phone-input-wrapper {
     --iti-dialcode-color: var(--color-gray-600);
   }

@@ -7,7 +7,7 @@ const blokOnDescription =
   "Si buscas un modelo más amigable con tu presupuesto, en Tebas hemos traído esta colaboración exclusiva con Blokon.  Elige entre el modelo que más te guste de las casas prefabricadas Blokon y deja que nosotros nos encarguemos de hacer un hogar perfecto para ti.";
 ---
 
-<section class="flex w-full basis-0.5" id="models">
+<section class="hidden w-full basis-0.5 md:flex" id="models">
   <div class="relative flex">
     <Model
       description="Los modelos Tebas combinan calidad y diseño moderno, con acabados lujosos, garantizando durabilidad y muebles elegantes. Estos son perfectos para ti si buscas una combinación de comodidad, exclusividad y elegancia. Escoge el modelo más adecuado de ti y prepárate para hacer tus sueños realidad."
@@ -44,5 +44,58 @@ const blokOnDescription =
         Elige entre nuestros modelos
       </h2>
     </div>
+  </div>
+</section>
+
+<section
+  class="block w-full px-4 py-16 md:hidden md:px-12 lg:px-24"
+  id="models"
+>
+  <!-- Título: visible normalmente en mobile, absolute en desktop -->
+  <div class="mb-12 block text-center md:hidden">
+    <h2 class="font-important text-3xl font-bold">
+      Elige entre nuestros modelos
+    </h2>
+  </div>
+
+  <div class="relative flex flex-col gap-12 md:flex-row md:gap-0">
+    <!-- Título centrado solo visible en escritorio -->
+    <div
+      class="absolute top-10 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 transform md:block"
+    >
+      <h2 class="font-important text-4xl font-bold">
+        Elige entre nuestros modelos
+      </h2>
+    </div>
+
+    <!-- Models: stack en mobile, side-by-side en desktop -->
+    <Model
+      description="Los modelos Tebas combinan calidad y diseño moderno, con acabados lujosos, garantizando durabilidad y muebles elegantes. Estos son perfectos para ti si buscas una combinación de comodidad, exclusividad y elegancia. Escoge el modelo más adecuado de ti y prepárate para hacer tus sueños realidad."
+      time="3 meses"
+      reference="/modelos-tebas"
+      cta="Explorar modelos"
+      logo={logoTebas}
+      alt="Logo de Tebas"
+      imageClassList="aspect-[1594/524] w-full h-auto object-contain"
+      classList="bg-[#343e4c] rounded-xl shadow-lg w-full md:w-1/2"
+      buttonClassList={["bg-cyan-600", "hover:bg-cyan-700", "text-white"]}
+    />
+    <Model
+      description={blokOnDescription}
+      time="2 meses"
+      reference="/modelos-blok-on"
+      cta="Explorar modelos"
+      logo={logoBlokon}
+      alt="Logo de Blokon"
+      imageClassList="aspect-[964/239] w-full h-auto object-contain"
+      classList="bg-gray-900 rounded-xl shadow-lg w-full md:w-1/2"
+      buttonClassList={[
+        "bg-transparent",
+        "hover:bg-gray-700",
+        "text-cyan-500",
+        "border",
+        "border-white",
+      ]}
+    />
   </div>
 </section>

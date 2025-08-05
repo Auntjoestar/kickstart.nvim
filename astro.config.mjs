@@ -18,7 +18,7 @@ export default defineConfig({
   },
   server: {
     allowedHosts: [
-      "etdw4v-ip-186-77-204-197.tunnelmole.net",
+			"nstwd3-ip-190-143-254-232.tunnelmole.net",
       "http://localhost:4321/",
     ],
   },
