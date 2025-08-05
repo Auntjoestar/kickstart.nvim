@@ -9,17 +9,20 @@ const images = import.meta.glob("../assets/images/*", {
 ---
 
 <Layout>
-  <div class="flex flex-col gap-8 px-40 pt-8">
-    <h1 class="text-4xl font-bold">Galería</h1>
-    <p>
+  <div class="flex flex-col gap-8 px-4 pt-8 sm:px-6 md:px-10 lg:px-20 xl:px-40">
+    <h1 class="text-3xl font-bold sm:text-4xl">Galería</h1>
+    <p class="text-base sm:text-lg">
       En esta galería preparada especialmente para ti puedes observar alguno de
       los proyectos finalizados por Grupo Tebas.
     </p>
 
-    <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+    <!-- Fewer columns on desktop = larger images -->
+    <div
+      class="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+    >
       {
         Object.entries(images).map(([path, src]) => (
-          <div class="aspect-square overflow-hidden rounded-lg">
+          <div class="aspect-[4/3] overflow-hidden rounded-lg">
             <Image
               class="h-full w-full object-cover"
               src={src}
