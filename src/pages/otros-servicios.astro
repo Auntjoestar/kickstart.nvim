@@ -6,7 +6,10 @@ import { Image } from "astro:assets";
 const services = await getCollection("services");
 ---
 
-<Layout>
+<Layout
+  title="Otros Servicios"
+  description="Echa un vistazo a los otros servicios de construcción ofrecidos por Grupo Tebas."
+>
   <div class="flex flex-col gap-8 px-6 pt-8 md:px-40">
     <h1 class="text-4xl font-bold">Otros servicios</h1>
     <p>

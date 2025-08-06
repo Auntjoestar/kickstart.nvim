@@ -4,22 +4,34 @@ import Navbar from "../components/layout/navbar/Navbar.astro";
 import type { Props as NavbarProps } from "../components/layout/navbar/Navbar.astro";
 import WhatsappButton from "../components/layout/navbar/WhatsappButton.astro";
 import Footer from "../components/layout/footer/Footer.astro";
-
-const alt = "logo-tebas";
+import { SEO } from "astro-seo";
 
 const navbarProps: NavbarProps = {
   logo: "logo",
 };
+
+// Define the type for the props you'll pass to this layout
+export interface Props {
+  title: string;
+  description: string;
+  // You can add more props for OpenGraph, Twitter, etc., as needed
+  // For example:
+  // image?: string;
+  // pageTitle?: string;
+}
+
+// Destructure the props
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="h-full scroll-smooth">
   <head>
+    <SEO title={title} description={description} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Tebas: Construcciones, soluciones y diseños</title>
     <script
       is:inline
       src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"

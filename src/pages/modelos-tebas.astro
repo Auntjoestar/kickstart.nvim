@@ -6,7 +6,10 @@ import { getCollection } from "astro:content";
 const models = await getCollection("tebas");
 ---
 
-<Layout>
+<Layout
+  title="Modelos Tebas"
+  description="Los Modelos Tebas fueron diseñados especialmente brindarte el mayor confort el menor tiempo posible, en menos de lo que esperas tendrás las llaves de tu casa en la mano."
+>
   <div class="flex flex-col gap-8 px-6 pt-8 md:px-40">
     <h1 class="text-4xl font-bold">Modelos Tebas</h1>
     <p>

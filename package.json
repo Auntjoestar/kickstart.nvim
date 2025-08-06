@@ -12,6 +12,7 @@
     "@astrojs/vue": "^5.1.0",
     "@uploadthing/react": "^7.3.2",
     "astro": "^5.8.0",
+    "astro-seo": "^0.8.4",
     "ci-info": "^4.3.0",
     "entities": "2.2.0",
     "flowbite": "^3.1.2",
