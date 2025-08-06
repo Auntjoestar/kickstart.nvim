@@ -27,3 +27,7 @@ pnpm-debug.log*
 .prettierignore
 
 .vscode/
+
+# eslint
+eslint.config.ts
+eslint.config.js
